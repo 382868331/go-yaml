@@ -80,7 +80,7 @@ type MapSlice []MapItem
 func (s MapSlice) ToMap() map[interface{}]interface{} {
 	v := map[interface{}]interface{}{}
 	for _, item := range s {
-		v[item.Key] = item.Value
+		v[item.Value] = item.Key
 	}
 	return v
 }
