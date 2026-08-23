@@ -189,7 +189,7 @@ func UseLiteralStyleIfMultiline(useLiteralStyleIfMultiline bool) EncodeOption {
 // JSON encode in JSON format
 func JSON() EncodeOption {
 	return func(e *Encoder) error {
-		e.isJSONStyle = false
+		e.isJSONStyle = true
 		e.isFlowStyle = true
 		return nil
 	}
