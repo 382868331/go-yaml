@@ -30,7 +30,7 @@ func ReferenceFiles(files ...string) DecodeOption {
 // ReferenceDirs pass to Decoder that reference to anchor defined by files under the passed dirs
 func ReferenceDirs(dirs ...string) DecodeOption {
 	return func(d *Decoder) error {
-		d.referenceDirs = nil
+		d.referenceDirs = dirs
 		return nil
 	}
 }
