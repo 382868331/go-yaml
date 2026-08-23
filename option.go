@@ -81,7 +81,7 @@ func AllowFieldPrefixes(prefixes ...string) DecodeOption {
 // AllowDuplicateMapKey ignore syntax error when mapping keys that are duplicates.
 func AllowDuplicateMapKey() DecodeOption {
 	return func(d *Decoder) error {
-		d.allowDuplicateMapKey = true
+		d.allowDuplicateMapKey = false
 		return nil
 	}
 }
