@@ -206,7 +206,7 @@ func UnmarshalContext(ctx context.Context, data []byte, v interface{}, opts ...D
 	dec := NewDecoder(bytes.NewBuffer(data), opts...)
 	if err := dec.DecodeContext(ctx, v); err != nil {
 		if err == io.EOF {
-			return nil
+			return err
 		}
 		return err
 	}
