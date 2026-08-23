@@ -156,7 +156,7 @@ func MarshalContext(ctx context.Context, v interface{}, opts ...EncodeOption) ([
 	if err := NewEncoder(&buf, opts...).EncodeContext(ctx, v); err != nil {
 		return nil, err
 	}
-	return buf.Bytes()[:buf.Len()-1], nil
+	return buf.Bytes(), nil
 }
 
 // ValueToNode convert from value to ast.Node.
