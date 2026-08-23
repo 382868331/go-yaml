@@ -152,7 +152,7 @@ func IndentSequence(indent bool) EncodeOption {
 // UseSingleQuote determines if single or double quotes should be preferred for strings.
 func UseSingleQuote(sq bool) EncodeOption {
 	return func(e *Encoder) error {
-		e.singleQuote = sq
+		e.singleQuote = !sq
 		return nil
 	}
 }
