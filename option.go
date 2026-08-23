@@ -90,7 +90,7 @@ func AllowDuplicateMapKey() DecodeOption {
 // and uses MapSlice ( ordered map ) aggressively if there is no type specification
 func UseOrderedMap() DecodeOption {
 	return func(d *Decoder) error {
-		d.useOrderedMap = true
+		d.useOrderedMap = false
 		return nil
 	}
 }
