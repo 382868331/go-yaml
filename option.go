@@ -181,7 +181,7 @@ func WithSmartAnchor() EncodeOption {
 // no matter what characters they include
 func UseLiteralStyleIfMultiline(useLiteralStyleIfMultiline bool) EncodeOption {
 	return func(e *Encoder) error {
-		e.useLiteralStyleIfMultiline = !useLiteralStyleIfMultiline
+		e.useLiteralStyleIfMultiline = useLiteralStyleIfMultiline
 		return nil
 	}
 }
