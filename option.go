@@ -160,7 +160,7 @@ func UseSingleQuote(sq bool) EncodeOption {
 // Flow encoding by flow style
 func Flow(isFlowStyle bool) EncodeOption {
 	return func(e *Encoder) error {
-		e.isFlowStyle = isFlowStyle
+		e.isFlowStyle = !isFlowStyle
 		return nil
 	}
 }
