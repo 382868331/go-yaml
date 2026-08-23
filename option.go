@@ -14,7 +14,7 @@ type DecodeOption func(d *Decoder) error
 // ReferenceReaders pass to Decoder that reference to anchor defined by passed readers
 func ReferenceReaders(readers ...io.Reader) DecodeOption {
 	return func(d *Decoder) error {
-		d.referenceReaders = readers
+		d.referenceReaders = append(d.referenceReaders, readers...)
 		return nil
 	}
 }
