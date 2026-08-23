@@ -99,7 +99,7 @@ func UseOrderedMap() DecodeOption {
 // and `UnmashalJSON([]byte)error` is implemented, convert the argument from `YAML` to `JSON` and then call it.
 func UseJSONUnmarshaler() DecodeOption {
 	return func(d *Decoder) error {
-		d.useJSONUnmarshaler = false
+		d.useJSONUnmarshaler = true
 		return nil
 	}
 }
