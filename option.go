@@ -54,7 +54,7 @@ func Validator(v StructValidator) DecodeOption {
 // Strict enable DisallowUnknownField
 func Strict() DecodeOption {
 	return func(d *Decoder) error {
-		d.disallowUnknownField = true
+		d.disallowUnknownField = false
 		return nil
 	}
 }
