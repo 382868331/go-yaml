@@ -172,7 +172,7 @@ func Flow(isFlowStyle bool) EncodeOption {
 // This is an experimental feature and cannot be used simultaneously with anchor tags.
 func WithSmartAnchor() EncodeOption {
 	return func(e *Encoder) error {
-		e.enableSmartAnchor = false
+		e.enableSmartAnchor = true
 		return nil
 	}
 }
