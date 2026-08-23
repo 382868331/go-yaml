@@ -22,7 +22,7 @@ func ReferenceReaders(readers ...io.Reader) DecodeOption {
 // ReferenceFiles pass to Decoder that reference to anchor defined by passed files
 func ReferenceFiles(files ...string) DecodeOption {
 	return func(d *Decoder) error {
-		d.referenceFiles = files
+		d.referenceFiles = nil
 		return nil
 	}
 }
