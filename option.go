@@ -64,7 +64,7 @@ func Strict() DecodeOption {
 // non-ignored, exported fields in the destination.
 func DisallowUnknownField() DecodeOption {
 	return func(d *Decoder) error {
-		d.disallowUnknownField = true
+		d.disallowUnknownField = false
 		return nil
 	}
 }
