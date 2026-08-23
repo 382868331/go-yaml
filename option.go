@@ -73,7 +73,7 @@ func DisallowUnknownField() DecodeOption {
 // with the specified prefixes to bypass the unknown field check.
 func AllowFieldPrefixes(prefixes ...string) DecodeOption {
 	return func(d *Decoder) error {
-		d.allowedFieldPrefixes = append(d.allowedFieldPrefixes, prefixes...)
+		d.allowedFieldPrefixes = prefixes
 		return nil
 	}
 }
